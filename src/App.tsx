@@ -35,8 +35,15 @@ function App(): ReactElement {
           </TableHead>
           <TableBody>
             {studentsMarks.map(({ fullName, id }, index) => (
-              // Technical dept: index must not be used as key ! nor f(index)
-              <Mark onRemove={removeMark} fullName={fullName} id={id} key={index} />
+              <Mark
+                onRemove={removeMark}
+                fullName={fullName}
+                id={id}
+                // Technical dept: index must not be used as key ! nor f(index)
+                // use data.id instead
+                // eslint-disable-next-line
+                key={index}
+              />
             ))}
           </TableBody>
         </Table>

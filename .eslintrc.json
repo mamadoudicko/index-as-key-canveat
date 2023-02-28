@@ -19,7 +19,7 @@
   },
   "plugins": ["react"],
   "rules": {
-    "react/no-array-index-key": "warn"
+    "react/no-array-index-key": "error"
   },
   "settings": {
     "react": {
